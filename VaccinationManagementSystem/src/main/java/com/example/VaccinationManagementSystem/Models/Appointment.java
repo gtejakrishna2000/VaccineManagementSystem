@@ -1,5 +1,6 @@
 package com.example.VaccinationManagementSystem.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,10 +24,12 @@ public class Appointment {
     private LocalTime appointmentTime;
     private Date appointmentDate;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn
     private Doctor doctor;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn
     private User user;

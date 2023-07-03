@@ -40,6 +40,7 @@ public class Doctor {
     @JsonIgnore
     private VaccinationCenter vaccineCenter;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private List<Appointment> appointmentList = new ArrayList<>();
 }

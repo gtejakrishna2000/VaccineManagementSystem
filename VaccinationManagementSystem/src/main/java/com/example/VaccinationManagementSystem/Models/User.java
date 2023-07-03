@@ -34,6 +34,7 @@ public class User {
     @JsonIgnore
     private Dose dose;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Appointment> appointmentList = new ArrayList<>();
 
